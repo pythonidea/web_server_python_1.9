@@ -5,4 +5,4 @@ def app(environ, start_response):
     ]
     body = '\n'.join(environ['QUERY_STRING'].split('&'))
     start_response(status, headers )
-    return body
+    return [body]
